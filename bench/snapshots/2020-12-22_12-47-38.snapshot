@@ -1,0 +1,4 @@
+duration:1.0;mem stats:false;sys mem stats:false
+module;test;tags;iterations;elapsed
+BasicWorkerPoolBench	Enum		500000	2846788
+BasicWorkerPoolBench	basic		100000	2260454
