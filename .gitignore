@@ -25,3 +25,5 @@ worker_pool_bench-*.tar
 
 # Temporary files for e.g. tests
 /tmp
+
+/bench/snapshots/

@@ -18,4 +18,12 @@ defmodule BasicWorkerPoolBench do
   bench "Enum" do
     Enum.map(@range, & &1 * 2)
   end
+
+  bench "raw spawn" do
+    spawn(SampleWorker, :work, [{self(), @range}])
+    receive do
+      {:ok, result} -> result
+      after 1000 -> IO.puts "Timeout"
+    end
+  end
 end
